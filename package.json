@@ -7,6 +7,10 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack"
   },
+  "main": "dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "core-js": "^3.8.3",
