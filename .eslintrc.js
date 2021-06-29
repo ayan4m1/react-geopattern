@@ -16,13 +16,12 @@ module.exports = {
     'prettier',
     'prettier/react'
   ],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 9,
-    sourceType: 'module'
+    ecmaVersion: 12
   },
   rules: {
     'accessor-pairs': 2,
