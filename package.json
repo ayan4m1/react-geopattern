@@ -5,7 +5,8 @@
   "author": "ayan4m1 <andrew@bulletlogic.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack"
+    "prepack": "npm run build",
+    "build": "rollup -c"
   },
   "main": "dist/index.js",
   "files": [
@@ -23,28 +24,23 @@
     "@babel/core": "^7.21.0",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
-    "@babel/plugin-transform-regenerator": "^7.20.5",
     "@babel/plugin-transform-runtime": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/register": "^7.21.0",
-    "babel-loader": "^9.1.2",
-    "clean-webpack-plugin": "^4.0.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-eslint": "^9.0.3",
     "cross-env": "^7.0.3",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
-    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-import-resolver-node": "^0.3.7",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-webpack-plugin": "^4.0.0",
     "geopattern": "^1.2.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
-    "terser-webpack-plugin": "^5.3.6",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "rollup": "^3.18.0"
   }
 }
