@@ -7,21 +7,19 @@ module.exports = {
     es6: true,
     node: true
   },
-  plugins: ['import', 'react', 'prettier'],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
-    'plugin:import/errors',
-    'prettier',
-    'prettier/react'
+    'plugin:import/recommended'
   ],
   parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 12
+    ecmaVersion: 12,
+    requireConfigFile: false
   },
   rules: {
     'accessor-pairs': 2,
