@@ -1,7 +1,7 @@
 # react-geopattern
 
 [![Package Version](https://badge.fury.io/js/react-geopattern.svg)](https://www.npmjs.com/package/react-geopattern)
-[![codecov](https://codecov.io/github/ayan4m1/react-geopattern/branch/master/graph/badge.svg?token=ZGX9D11EZO)](https://codecov.io/github/ayan4m1/react-geopattern)
+[![codecov](https://codecov.io/gh/ayan4m1/react-geopattern/branch/main/graph/badge.svg?token=ZGX9D11EZO)](https://codecov.io/gh/ayan4m1/react-geopattern)
 
 Use [GeoPattern](https://github.com/btmills/geopattern) from [React](https://github.com/facebook/react).
 
