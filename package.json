@@ -1,46 +1,50 @@
 {
   "name": "react-geopattern",
   "version": "0.2.0",
-  "description": "",
+  "type": "module",
+  "description": "GeoPattern wrapper/cache for React",
   "author": "ayan4m1 <andrew@bulletlogic.com>",
   "license": "MIT",
-  "scripts": {
-    "prepack": "npm run build",
-    "build": "rollup -c"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayan4m1/react-geopattern"
   },
-  "main": "dist/index.js",
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=16"
+  },
   "files": [
-    "dist/index.js"
+    "lib/"
   ],
-  "dependencies": {
-    "@babel/runtime": "^7.21.0",
-    "core-js": "^3.29.0"
+  "scripts": {
+    "prepack": "rollup -c --configPlugin typescript",
+    "build": "rollup -c --configPlugin typescript",
+    "develop": "rollup -c -w --configPlugin typescript",
+    "lint": "eslint ./src --ext .ts",
+    "test": "jest",
+    "version": "auto-changelog -p -b 10 -l 10 && git add CHANGELOG.md"
   },
   "peerDependencies": {
     "geopattern": "^1.2.3",
     "react": "^18.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@babel/eslint-parser": "^7.19.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
-    "@babel/plugin-transform-runtime": "^7.21.0",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6",
-    "@babel/register": "^7.21.0",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-eslint": "^9.0.3",
-    "cross-env": "^7.0.3",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/geopattern": "^1.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "auto-changelog": "^2.4.0",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
-    "eslint-import-resolver-node": "^0.3.7",
-    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "geopattern": "^1.2.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
-    "rollup": "^3.18.0"
+    "rollup": "^3.18.0",
+    "typescript": "^4.9.5"
   }
 }
