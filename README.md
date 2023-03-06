@@ -1,5 +1,7 @@
 # react-geopattern
 
+[![Package Version](https://badge.fury.io/js/react-geopattern.svg)](https://www.npmjs.com/package/react-geopattern)
+
 Use [GeoPattern](https://github.com/btmills/geopattern) from [React](https://github.com/facebook/react).
 
 ## features
