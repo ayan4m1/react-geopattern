@@ -1,7 +1,5 @@
 import { generate, Pattern, PatternOptions } from 'geopattern';
 
-export type CacheMap = Map<string, Pattern>;
-
 /**
  * Represents an object with CSS style properties.
  */
@@ -9,7 +7,7 @@ export interface StyleObject {
   'background-image'?: string;
 }
 
-const moduleCache: CacheMap = new Map<string, Pattern>();
+const moduleCache = new Map<string, Pattern>();
 
 /**
  * Create and cache or return cached GeoPattern object.
@@ -22,7 +20,7 @@ const moduleCache: CacheMap = new Map<string, Pattern>();
 export const useGeoPattern = (
   string: string,
   options?: PatternOptions,
-  cache: CacheMap = moduleCache
+  cache: Map<string, Pattern> = moduleCache
 ): Pattern => {
   const isCached = cache.has(string);
   const pattern = isCached ? cache.get(string) : generate(string, options);
