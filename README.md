@@ -17,7 +17,7 @@ Use [GeoPattern](https://github.com/btmills/geopattern) from [React](https://git
 
 ## installation
 
-> npm install --save react-geopattern
+> npm install --save geopattern@1 react-geopattern
 
 ## usage
 
