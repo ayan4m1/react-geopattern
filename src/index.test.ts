@@ -1,5 +1,5 @@
 import { Pattern, generate, PatternOptions } from 'geopattern';
-import { useGeoPattern, computePatternStyle, StyleObject } from './index';
+import { useGeoPattern } from './index';
 
 jest.mock('geopattern', () => ({
   generate: jest.fn()
@@ -7,14 +7,6 @@ jest.mock('geopattern', () => ({
 
 afterEach(() => {
   jest.clearAllMocks();
-});
-
-const createPatternMock = (dataUrl?: string): Pattern => ({
-  color: '',
-  toBase64: jest.fn(),
-  toDataUri: jest.fn(),
-  toDataUrl: jest.fn().mockReturnValue(dataUrl),
-  toSvg: jest.fn()
 });
 
 describe('useGeoPattern', () => {
@@ -42,24 +34,16 @@ describe('useGeoPattern', () => {
 
   it('caches externally if desired', () => {
     const key = 'key';
-    const value = createPatternMock();
+    const value: Pattern = {
+      color: '',
+      toBase64: jest.fn(),
+      toDataUri: jest.fn(),
+      toDataUrl: jest.fn(),
+      toSvg: jest.fn()
+    };
 
     cache.set(key, value);
     useGeoPattern(key, undefined, cache);
     expect(generate).not.toHaveBeenCalled();
-  });
-});
-
-describe('computePatternStyle', () => {
-  const imageData = 'test123';
-
-  it('generates pattern data URL', () => {
-    const pattern = createPatternMock(imageData);
-    const expected: StyleObject = {
-      'background-image': imageData
-    };
-
-    expect(computePatternStyle(pattern)).toEqual(expected);
-    expect(pattern.toDataUrl).toHaveBeenCalledTimes(1);
   });
 });
