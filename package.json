@@ -1,6 +1,6 @@
 {
   "name": "react-geopattern",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "type": "module",
   "description": "GeoPattern wrapper/cache for React",
   "author": "ayan4m1 <andrew@bulletlogic.com>",
