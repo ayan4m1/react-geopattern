@@ -10,29 +10,31 @@ afterEach(() => {
 });
 
 describe('useGeoPattern', () => {
-  const inputString = 'test';
   const cache = new Map<string, Pattern>();
 
   afterEach(() => {
     cache.clear();
   });
 
-  it('calls GeoPattern generate()', () => {
+  it('calls GeoPattern generate(...args)', () => {
+    const testKey = 'test';
     const options: PatternOptions = {};
 
-    useGeoPattern(inputString, options, cache);
-    expect(generate).toHaveBeenCalledWith(inputString, options);
+    useGeoPattern(testKey, options);
+    expect(generate).toHaveBeenCalledWith(testKey, options);
   });
 
   it('caches interally by default', () => {
-    const firstPattern = useGeoPattern(inputString);
-    const secondPattern = useGeoPattern(inputString);
+    const testKey = 'internalTest';
+
+    const firstPattern = useGeoPattern(testKey);
+    const secondPattern = useGeoPattern(testKey);
 
     expect(firstPattern).toBe(secondPattern);
     expect(generate).toHaveBeenCalledTimes(1);
   });
 
-  it('caches externally if desired', () => {
+  it('caches externally if Map is provided', () => {
     const key = 'key';
     const value: Pattern = {
       color: '',
