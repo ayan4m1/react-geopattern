@@ -15,7 +15,7 @@ Use [GeoPattern](https://github.com/btmills/geopattern) from [React](https://git
 
 ## prerequisites
 
-- Node.js 20+
+- Node.js 22+
 - React 18+
 
 ## installation
