@@ -7,5 +7,14 @@ export default tslint.config(
   eslint.configs.recommended,
   ...tslint.configs.recommended,
   eslintPluginReact.configs.flat.recommended,
+  eslintPluginReact.configs.flat['jsx-runtime'],
+  {
+    files: ['**/*.ts'],
+    settings: {
+      react: {
+        version: '18'
+      }
+    }
+  },
   eslintPluginPrettier
 );
