@@ -2809,6 +2809,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"extend@npm:~1.2.1":
+  version: 1.2.1
+  resolution: "extend@npm:1.2.1"
+  checksum: 10c0/820d1c6b6ca76e1c65a706757923eb836b40c72039177e0460f196ef52d3a1baa32e25ee5ba6bd175c54323178c85c512dead19958e1b416bec3c4342ca177dd
+  languageName: node
+  linkType: hard
+
 "fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
@@ -3034,6 +3041,15 @@ __metadata:
   version: 1.0.0-beta.2
   resolution: "gensync@npm:1.0.0-beta.2"
   checksum: 10c0/782aba6cba65b1bb5af3b095d96249d20edbe8df32dbf4696fd49be2583faf676173bf4809386588828e4dd76a3354fcbeb577bab1c833ccd9fc4577f26103f8
+  languageName: node
+  linkType: hard
+
+"geopattern@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "geopattern@npm:1.2.3"
+  dependencies:
+    extend: "npm:~1.2.1"
+  checksum: 10c0/1fc8aaad70cbf5871966cb455355d909e2a284d588090f85b4ef406822adc53ec4a813b4c2dc3a24545118a5dabf24d1590b03dd74ad37962256fb4c71d5f830
   languageName: node
   linkType: hard
 
@@ -5366,6 +5382,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.2"
     eslint-plugin-prettier: "npm:^5.2.6"
     eslint-plugin-react: "npm:^7.37.5"
+    geopattern: "npm:^1.2.3"
     husky: "npm:^9.1.7"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
