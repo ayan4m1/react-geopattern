@@ -1,4 +1,4 @@
-name: Deploy releases to NPM
+name: Publish releases to NPM
 on:
   push:
     branches: ['main']
